@@ -3,106 +3,41 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BED Architect</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
-      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      font-family: sans-serif;
+    }
+    nav {
       background: #f3f3f3;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
       color: #111;
-      line-height: 1.6;
     }
     header {
-      background: #e0e0e0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      padding: 4rem;
       text-align: center;
-      padding: 2rem;
-    }
-    header h1 {
-      font-size: 4rem;
-      letter-spacing: 1rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      font-style: italic;
-      margin-top: 1rem;
-    }
-    .lang-switch {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 9999;
-      background: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
-    .portfolio-link {
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
-      z-index: 9999;
-      background: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      font-size: 1rem;
-      text-decoration: none;
-      color: #111;
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 1rem 0;
-    }
-    .hidden {
-      display: none;
     }
   </style>
 </head>
 <body>
 
-<a class="portfolio-link" href="https://drive.google.com/file/d/1MyMu76S4Dg4o8TlC4qyQBY23qztlozO7/view?usp=sharing" target="_blank">📁 Mon Portfolio</a>
-<div class="lang-switch" onclick="switchLang()">🇫🇷 / 🇬🇧</div>
+<nav>
+  <a href="index.html">🏠 Accueil</a>
+  <a href="portfolio.html">📁 Portfolio</a>
+</nav>
 
 <header>
-  <h1>BED</h1>
-  <p id="tagline-fr">Less is more</p>
-  <p id="tagline-en" class="hidden">Less is more</p>
+  <h1>BED Architect</h1>
+  <p>Less is more</p>
 </header>
-
-<section>
-  <h2 id="project-title-fr">Projet : L'Écrin d’Hestia – Appartement à Nice</h2>
-  <h2 id="project-title-en" class="hidden">Project: The Hestia Nest – Apartment in Nice</h2>
-  <p id="project-text-fr">Rénovation complète d’un appartement de 32m² à Nice, mêlant lumière naturelle, optimisation verticale (mezzanine), et atmosphère chaleureuse inspirée de la déesse du foyer, Hestia.</p>
-  <p id="project-text-en" class="hidden">A full renovation of a 32m² apartment in Nice. Natural light, vertical optimization through a mezzanine, and a warm ambiance inspired by Hestia, goddess of the hearth.</p>
-  <img src="https://placehold.co/800x400?text=3D+Vue+Hestia" alt="3D View Hestia">
-</section>
-
-<script>
-  let isFrench = true;
-  function switchLang() {
-    isFrench = !isFrench;
-    document.querySelectorAll('[id$="-fr"]').forEach(el => el.classList.toggle('hidden', !isFrench));
-    document.querySelectorAll('[id$="-en"]').forEach(el => el.classList.toggle('hidden', isFrench));
-  }
-</script>
 
 </body>
 </html>
