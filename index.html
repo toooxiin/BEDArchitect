@@ -128,7 +128,15 @@
 
 <nav>
   <button onclick="switchLang()">Français / English</button>
-</nav>
+
+    <div style="position: fixed; top: 1rem; left: 1rem; z-index: 9999;">
+      <select onchange="if(this.value) document.getElementById('portfolio-reader').src=this.value;">
+        <option value="">📁 Voir le Portfolio</option>
+        <option value='https://drive.google.com/viewerng/viewer?embedded=true&url=https://drive.google.com/uc?export=download&id=1MyMu76S4Dg4o8TlC4qyQBY23qztlozO7'>Portfolio</option>
+      </select>
+    </div>
+    </nav>
+    
 
 <header>
   <h1>BED</h1>
@@ -174,7 +182,13 @@
 
 <footer>
   <p>&copy; 2025 BED – Beltrando Enzo Design | <a href="https://linktr.ee/BEDArchitect" target="_blank">Linktree</a></p>
-</footer>
+
+    <section>
+      <h2>Lecture intégrée du Portfolio</h2>
+      <iframe id="portfolio-reader" src="" width="100%" height="600" style="border:1px solid #ccc;"></iframe>
+    </section>
+    </footer>
+    
 
 <script>
   let isFrench = true;
