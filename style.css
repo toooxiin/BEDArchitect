@@ -1,33 +1,3 @@
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    background-color: black;
-    padding: 10px;
-}
-nav ul li {
-    margin-right: 20px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-.vision .background {
-    background-image: url('vision.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.text-center {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-}
+body { font-family: sans-serif; margin: 0; padding: 0; background: #f3f3f3; }
+main { max-width: 900px; margin: auto; }

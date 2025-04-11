@@ -1,68 +1,29 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Méthodologie - BED</title>
-  
-<style>
-  body { font-family: sans-serif; margin: 0; padding: 0; }
-  nav {
-    background: #f3f3f3;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-  nav a {
-    text-decoration: none;
-    color: #111;
-    font-weight: bold;
-  }
-  h1, h2, p, ul, form, blockquote {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-  }
-  form input, form textarea, form button {
-    display: block;
-    margin: 1rem auto;
-    width: 100%;
-    max-width: 600px;
-    padding: 0.8rem;
-    font-size: 1rem;
-  }
-  .hidden { display: none; }
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Méthodologie – BEDArchitect</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   
 <nav>
-  <a href="index.html">Accueil</a>
-  <a href="vision.html">Vision</a>
-  <a href="methodologie.html">Méthodologie</a>
-  <a href="projets.html">Projets</a>
-  <a href="inspirations.html">Inspirations</a>
-  <a href="temoignages.html">Témoignages</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="contact.html">Contact</a>
-  <span style="margin-left:auto"><button onclick="switchLang()">🇫🇷 / 🇬🇧</button></span>
+  <ul style="list-style:none;display:flex;gap:20px;background:#111;padding:10px;">
+    <li><a href="index.html" style="color:white;text-decoration:none;">Accueil</a></li>
+    <li><a href="vision.html" style="color:white;text-decoration:none;">Ma vision</a></li>
+    <li><a href="projets.html" style="color:white;text-decoration:none;">Projets</a></li>
+    <li><a href="portfolio.html" style="color:white;text-decoration:none;">Portfolio</a></li>
+    <li><a href="methodologie.html" style="color:white;text-decoration:none;">Méthodologie</a></li>
+    <li><a href="inspirations.html" style="color:white;text-decoration:none;">Inspirations</a></li>
+    <li><a href="temoignages.html" style="color:white;text-decoration:none;">Témoignages</a></li>
+    <li><a href="contact.html" style="color:white;text-decoration:none;">Contact</a></li>
+  </ul>
 </nav>
 
-  <div class="fr"><ul><li>Analyse</li><li>Esquisse</li><li>3D / Plans</li><li>Matériaux</li></ul></div>
-  <div class="en hidden"><ul><li>Site analysis</li><li>Sketching</li><li>3D & Plans</li><li>Materials</li></ul></div>
-  
-<script>
-  let isFrench = true;
-  function switchLang() {
-    isFrench = !isFrench;
-    document.querySelectorAll('.fr').forEach(el => el.style.display = isFrench ? 'block' : 'none');
-    document.querySelectorAll('.en').forEach(el => el.style.display = isFrench ? 'none' : 'block');
-  }
-</script>
-
-</body></html>
+  <main style="padding: 40px;">
+    <h1>Méthodologie</h1>
+    <p>Processus de conception BEDArchitect.</p>
+  </main>
+</body>
+</html>
