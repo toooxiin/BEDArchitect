@@ -6,22 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vision – BEDArchitect</title>
   <style>
-    body { font-family: sans-serif; margin: 0; background: #fff; padding-bottom: 4rem; }
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: url('https://images.unsplash.com/photo-1598908316879-c9d14e7a16ce?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
     nav {
-      background: #f3f3f3;
+      background: rgba(0,0,0,0.6);
       padding: 1rem;
       display: flex;
       justify-content: space-between;
     }
-    nav a {
+    nav a, nav button {
+      color: white;
       text-decoration: none;
-      color: #111;
       font-weight: bold;
+      background: none;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
     }
     .container {
       max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1rem;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: rgba(0,0,0,0.6);
+      border-radius: 8px;
     }
     h2 {
       text-align: center;
@@ -34,26 +46,6 @@
       margin-bottom: 2rem;
     }
     .hidden { display: none; }
-    .img-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .img-row img {
-      width: 280px;
-      height: auto;
-      border-radius: 6px;
-      transition: transform 0.4s ease, filter 0.3s ease;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .img-row img:hover {
-      transform: scale(1.05);
-      filter: brightness(1.1);
-    }
-    button {
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
@@ -75,14 +67,6 @@
   <p>I like things done well. Not in a rigid or overly technical way – but done right. When space breathes. When light carves volumes without burdening them. When what isn’t shown matters as much as what is.</p>
   <p>A successful project is one that pleases the client. But it’s also a place that mirrors them, deeply and truthfully. It must reflect who they are, while carrying a signature – the touch of BEDArchitect.</p>
   <p>I work by instinct. I feel the space, the materials, the light. I let them speak. Then I shape with them – not against them.</p>
-</div>
-
-<div class="container">
-  <div class="img-row">
-    <img src="https://placehold.co/300x200?text=Vide+et+Lumiere" alt="Vide et Lumière">
-    <img src="https://placehold.co/300x200?text=Structure+Brut" alt="Structure brute">
-    <img src="https://placehold.co/300x200?text=Matiere+et+Volume" alt="Matière et Volume">
-  </div>
 </div>
 
 <script>
