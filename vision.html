@@ -1,61 +1,90 @@
-<!DOCTYPE html><html lang="fr">
+
+<!DOCTYPE html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vision - BED</title>
-  
-<style>
-  body { font-family: sans-serif; margin: 0; padding: 0; }
-  nav {
-    background: #f3f3f3;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-  nav a {
-    text-decoration: none;
-    color: #111;
-    font-weight: bold;
-  }
-  h1, h2, p, ul, form, blockquote {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-  }
-  form input, form textarea, form button {
-    display: block;
-    margin: 1rem auto;
-    width: 100%;
-    max-width: 600px;
-    padding: 0.8rem;
-    font-size: 1rem;
-  }
-  .hidden { display: none; }
-</style>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vision – BEDArchitect</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; background: #fff; padding-bottom: 4rem; }
+    nav {
+      background: #f3f3f3;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    nav a {
+      text-decoration: none;
+      color: #111;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .hidden { display: none; }
+    .img-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .img-row img {
+      width: 280px;
+      height: auto;
+      border-radius: 6px;
+      transition: transform 0.4s ease, filter 0.3s ease;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .img-row img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+    button {
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  
+
 <nav>
-  <a href="index.html">Accueil</a>
-  <a href="vision.html">Vision</a>
-  <a href="methodologie.html">Méthodologie</a>
-  <a href="projets.html">Projets</a>
-  <a href="inspirations.html">Inspirations</a>
-  <a href="temoignages.html">Témoignages</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="contact.html">Contact</a>
-  <span style="margin-left:auto"><button onclick="switchLang()">🇫🇷 / 🇬🇧</button></span>
+  <a href="index.html">← Accueil</a>
+  <button onclick="switchLang()">🇫🇷 / 🇬🇧</button>
 </nav>
 
-  <div class="fr"><h2>Ma Vision</h2><p>Créer des espaces essentiels, émotionnels et profondément fonctionnels.</p></div>
-  <div class="en hidden"><h2>My Vision</h2><p>Designing essential, emotional, and deeply functional spaces.</p></div>
-  
+<div class="container fr">
+  <h2>Ma Vision</h2>
+  <p>J’aime que les choses soient bien faites. Pas dans le sens strict ou technique, mais dans le sens juste. Quand le vide respire. Quand la lumière dessine l’espace sans l’encombrer. Quand ce qui ne se voit pas compte autant que ce qui se montre.</p>
+  <p>Un projet réussi, c’est un projet qui plaît au client. Mais c’est aussi un lieu qui lui ressemble, profondément, sans compromis. Il doit porter son image, son énergie, son usage – tout en laissant une trace, une empreinte : celle de BEDArchitect.</p>
+  <p>Je travaille à l’instinct. Je ressens d’abord les volumes, la matière, la lumière. Je les laisse parler. Et puis je construis avec eux, pas contre eux.</p>
+</div>
+
+<div class="container en hidden">
+  <h2>My Vision</h2>
+  <p>I like things done well. Not in a rigid or overly technical way – but done right. When space breathes. When light carves volumes without burdening them. When what isn’t shown matters as much as what is.</p>
+  <p>A successful project is one that pleases the client. But it’s also a place that mirrors them, deeply and truthfully. It must reflect who they are, while carrying a signature – the touch of BEDArchitect.</p>
+  <p>I work by instinct. I feel the space, the materials, the light. I let them speak. Then I shape with them – not against them.</p>
+</div>
+
+<div class="container">
+  <div class="img-row">
+    <img src="https://placehold.co/300x200?text=Vide+et+Lumiere" alt="Vide et Lumière">
+    <img src="https://placehold.co/300x200?text=Structure+Brut" alt="Structure brute">
+    <img src="https://placehold.co/300x200?text=Matiere+et+Volume" alt="Matière et Volume">
+  </div>
+</div>
+
 <script>
   let isFrench = true;
   function switchLang() {
@@ -65,4 +94,5 @@
   }
 </script>
 
-</body></html>
+</body>
+</html>
