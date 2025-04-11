@@ -1,86 +1,68 @@
-
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BED Architect</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: sans-serif;
-      background: #f3f3f3;
-    }
-    nav {
-      background: #f3f3f3;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-    }
-    nav a {
-      text-decoration: none;
-      font-weight: bold;
-      color: #111;
-    }
-    header {
-      padding: 4rem;
-      text-align: center;
-      opacity: 0;
-      transition: opacity 1s ease;
-    }
-    #loader {
-      position: fixed;
-      background: #111;
-      color: white;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-size: 2rem;
-      letter-spacing: 1rem;
-    }
-    .fade-out {
-      animation: fadeOut 1s ease forwards;
-    }
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - BED</title>
+  
+<style>
+  body { font-family: sans-serif; margin: 0; padding: 0; }
+  nav {
+    background: #f3f3f3;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  nav a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+  }
+  h1, h2, p, ul, form, blockquote {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  form input, form textarea, form button {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 600px;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  .hidden { display: none; }
+</style>
+
 </head>
 <body>
-
-<div id="loader">
-  <div>BED</div>
-</div>
-
+  
 <nav>
-  <a href="index.html">🏠 Accueil</a>
-  <a href="portfolio.html">📁 Portfolio</a>
+  <a href="index.html">Accueil</a>
+  <a href="vision.html">Vision</a>
+  <a href="methodologie.html">Méthodologie</a>
+  <a href="projets.html">Projets</a>
+  <a href="inspirations.html">Inspirations</a>
+  <a href="temoignages.html">Témoignages</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+  <span style="margin-left:auto"><button onclick="switchLang()">🇫🇷 / 🇬🇧</button></span>
 </nav>
 
-<header id="main-content">
-  <h1>BED Architect</h1>
-  <p>Less is more</p>
-</header>
-
+  <div class="fr"><h1>L’espace parle. BED l’écoute.</h1><p>Un studio d’architecture intérieure brut, fonctionnel et humain.</p></div>
+  <div class="en hidden"><h1>The space speaks. BED listens.</h1><p>An interior architecture studio focused on brutalism, function and emotion.</p></div>
+  
 <script>
-  window.addEventListener('load', () => {
-    const loader = document.getElementById('loader');
-    const content = document.getElementById('main-content');
-    loader.classList.add('fade-out');
-    setTimeout(() => {
-      loader.style.display = 'none';
-      content.style.opacity = 1;
-    }, 1000);
-  });
+  let isFrench = true;
+  function switchLang() {
+    isFrench = !isFrench;
+    document.querySelectorAll('.fr').forEach(el => el.style.display = isFrench ? 'block' : 'none');
+    document.querySelectorAll('.en').forEach(el => el.style.display = isFrench ? 'none' : 'block');
+  }
 </script>
 
-</body>
-</html>
+</body></html>

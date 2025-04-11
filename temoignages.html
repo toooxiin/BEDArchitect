@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Témoignages - BED</title>
+  
+<style>
+  body { font-family: sans-serif; margin: 0; padding: 0; }
+  nav {
+    background: #f3f3f3;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  nav a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+  }
+  h1, h2, p, ul, form, blockquote {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  form input, form textarea, form button {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 600px;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  .hidden { display: none; }
+</style>
+
+</head>
+<body>
+  
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="vision.html">Vision</a>
+  <a href="methodologie.html">Méthodologie</a>
+  <a href="projets.html">Projets</a>
+  <a href="inspirations.html">Inspirations</a>
+  <a href="temoignages.html">Témoignages</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+  <span style="margin-left:auto"><button onclick="switchLang()">🇫🇷 / 🇬🇧</button></span>
+</nav>
+
+  <div class="fr"><blockquote>BED a compris l’essence de mon espace.</blockquote></div>
+  <div class="en hidden"><blockquote>BED captured the soul of my space.</blockquote></div>
+  
+<script>
+  let isFrench = true;
+  function switchLang() {
+    isFrench = !isFrench;
+    document.querySelectorAll('.fr').forEach(el => el.style.display = isFrench ? 'block' : 'none');
+    document.querySelectorAll('.en').forEach(el => el.style.display = isFrench ? 'none' : 'block');
+  }
+</script>
+
+</body></html>
